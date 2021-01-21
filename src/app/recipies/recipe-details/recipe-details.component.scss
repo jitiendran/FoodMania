@@ -1,0 +1,32 @@
+.details-wrapper{
+    cursor: pointer;
+    padding: 1em;
+    span{
+        color: rgb(247, 76, 133);
+        font-weight: 600;
+        font-size: 1.3em;
+    }
+    h3{
+        font-weight: 500;
+    }
+    .btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button{
+            width: 6em;
+            border: none;
+            outline: none;
+            background: rgb(247, 76, 133);
+            color: #fff;
+            padding: .3em;
+            font-size: 1.3em;
+            border-radius: .3em;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                background: darken($color: rgb(247, 76, 133), $amount: 10%);
+            }
+        }
+    }
+}

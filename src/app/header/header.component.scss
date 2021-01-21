@@ -1,0 +1,54 @@
+.header-wrapper{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: .5em;
+    width: 98%;
+    .icon-wrapper{
+        width: 18%;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        h3{
+            margin-left: 1em;
+            font-size: 1.5em;
+        }
+        span{
+            color: #ff2e06;
+        }
+        img{
+            height: 5em;
+            width: 5em;
+        }
+    }
+
+    .nav-wrapper{
+        width: 63%;
+        display: flex;
+        position: sticky;
+        justify-content: space-evenly;
+        a{
+            font-size: 1.3em;
+            font-weight: 500;
+            text-decoration: none;
+            color: #ffb834;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .dropdwon-wrapper{
+        button{
+            margin-left: 7em;
+            background: none;
+            outline: none;
+            border: none;
+            font-size: 1.4em;
+            font-weight: 500;
+        }
+    }
+}
+hr{
+    border: .1px solid gainsboro;
+}
