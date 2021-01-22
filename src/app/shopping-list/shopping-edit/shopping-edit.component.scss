@@ -1,0 +1,48 @@
+.edit-wrapper{
+    margin-top: 1em;
+    font-family: 'Montserrat',sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    .input-contents{
+        display: flex;
+        align-items: center;
+        label{
+            font-size: 1.3em;
+            font-weight: 500;
+            margin-right: .3em;
+        }
+        input{
+            outline: none;
+            color: cornflowerblue;
+            margin-right: 2em;
+            border: 2px solid gainsboro;
+            padding: .3em;
+            border-radius: .4em;
+            font-size: 1.3em;
+        }
+    }
+    .btn-contents{
+        display: flex;
+        button{
+            transition: all .3s;
+            color: #fff;
+            width: 5em;
+            margin-right: 3em;
+            margin-top: 1em;
+            text-align: center;
+            font-size: 1.3em;
+            padding: .4em;
+            cursor: pointer;
+            border-radius: .3em;
+            border: none;
+            outline: none;
+            &:hover{
+                transform: scale(1.05)
+            }
+        }
+        #edit-btn{ background: rgb(247, 41, 109); }
+        #add-btn{ background: lightgreen; }
+        #clear-btn{ background: cornflowerblue; }
+    }
+}

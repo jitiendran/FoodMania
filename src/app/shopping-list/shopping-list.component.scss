@@ -1,0 +1,25 @@
+.shopping-list{
+    font-family: 'Montserrat',sans-serif;
+    width: 100%;
+    padding: 1em 2em;
+    h3{
+        font-size: 1.4em;
+        border-bottom: 3px solid coral;
+        width: 7.6em;
+    }
+    .shopping-wrapper{
+        margin-top: 1em;
+        border: 2px solid gainsboro;
+        padding: 1em;
+        border-radius: .5em;
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+        span{
+            color: #ff2e06;
+        }
+    }
+}

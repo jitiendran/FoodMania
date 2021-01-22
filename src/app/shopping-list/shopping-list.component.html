@@ -1,1 +1,8 @@
-<p>shopping-list works!</p>
+<div class="shopping-list">
+    <h3>Shopping List</h3>
+    <app-shopping-edit></app-shopping-edit>
+    <div class="shopping-wrapper" *ngFor="let ingredient of Ingredients">
+        <a href="#">{{ingredient.Name}} <span>({{ingredient.Amount}})</span></a>
+    </div>
+</div>
+<hr>
