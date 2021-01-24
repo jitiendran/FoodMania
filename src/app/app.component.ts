@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'foodmania';
+  navigateFeature:string = 'recipe'
+  onNavigate(data:string){
+    this.navigateFeature = data
+  }
 }

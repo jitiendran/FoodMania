@@ -1,8 +1,8 @@
 <div class="shopping-list">
     <h3>Shopping List</h3>
-    <app-shopping-edit></app-shopping-edit>
+    <app-shopping-edit (Items)="insertItems($event)"></app-shopping-edit>
     <div class="shopping-wrapper" *ngFor="let ingredient of Ingredients">
         <a href="#">{{ingredient.Name}} <span>({{ingredient.Amount}})</span></a>
+        <button (click)="deleteItems(ingredient.Name)"><i class="fas fa-minus-circle"></i></button>
     </div>
 </div>
-<hr>

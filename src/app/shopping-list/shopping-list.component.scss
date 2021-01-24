@@ -21,5 +21,14 @@
         span{
             color: #ff2e06;
         }
+        button{
+            background: none;
+            outline: none;
+            border: none;
+            color: rgb(247, 41, 109);
+            font-size: 1.4em;
+            float: right;
+            cursor: pointer;
+        }
     }
 }

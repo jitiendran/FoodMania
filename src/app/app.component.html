@@ -1,4 +1,5 @@
-<app-header></app-header>
-<app-shopping-list></app-shopping-list>
-<app-recipies></app-recipies>
+<app-header (clicked)="onNavigate($event)">
+</app-header>
+<app-shopping-list *ngIf = "navigateFeature === 'shopping'" ></app-shopping-list>
+<app-recipies *ngIf = "navigateFeature != 'shopping'"></app-recipies>
 <router-outlet></router-outlet>

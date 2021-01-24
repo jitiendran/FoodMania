@@ -1,0 +1,17 @@
+<div class="form">
+    <div class="add-recipe-wrapper">
+        <div class="add-content">
+            <label for="">Name</label>
+            <input type="text" [(ngModel)] = "name">
+        </div>
+        <div class="add-content">
+            <label for="">Description</label>
+            <input type="text" [(ngModel)] = "desc">
+        </div>
+        <div class="add-content">
+            <label for="">Image path</label>
+            <input type="text" [(ngModel)] = "imagepath">
+        </div>
+        <button (click)="AddRecipe()">Add</button>
+    </div>
+</div>
