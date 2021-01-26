@@ -5,8 +5,8 @@
     *ngIf="clicked"
     (addItems)="addrecipe($event)"></app-recipe-add>
 <div class="container">
-    <div class="recipe-wrapper" *ngFor = "let recipe of recipes" (click)="showDiv()">
-        <div class="display" *ngIf = "show; else showthis">
+    <div class="recipe-wrapper" *ngFor = "let recipe of recipes" (click)="showDiv(recipe)">
+        <div class="display">
             <img src="{{recipe.Imagepath}}" alt="">
             <div class="recipe-contents">
                 <div class="contents">
@@ -19,10 +19,5 @@
                 </div>
             </div>
         </div>
-        <ng-template #showthis>
-            <div class="nondisplay">
-                <app-recipe-details></app-recipe-details>
-            </div>
-        </ng-template>
     </div>
 </div>

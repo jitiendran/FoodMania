@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Recipe } from './recipies/recipe.model';
+import { Component, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',

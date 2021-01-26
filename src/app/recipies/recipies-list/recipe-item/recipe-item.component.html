@@ -1,1 +1,25 @@
-<p>recipe-item works!</p>
+<h3>Recipe Selected</h3>
+<div class="items-container" *ngIf="select">
+    <button (click)="addItems()">Add Ingredients</button>
+    <img src="{{items.Imagepath}}" alt="">
+    <h3>{{items.Name}}</h3>
+    <div class="input-container" *ngIf="clickedItem">
+        <label for="">Name</label>
+        <input type="text" #name>
+        <label for="">Amount</label>
+        <input type="number" id="amnt" #amount>
+        <button (click)="insert()">Add</button>
+    </div>
+    <div class="col-wrapper">
+        <h3>Ingredients</h3>
+        <ul *ngFor = "let ingredients of eachIngredient.Ingredients">
+            <li>
+                <div class="row">
+                    <p>{{ingredients.Name}} <span>({{ingredients.Amount}})</span></p>
+                    <button><i class="fas fa-cart-plus"></i> Add</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+

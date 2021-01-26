@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -11,7 +11,9 @@ export class RecipiesListComponent implements OnInit {
   desc:string = ''
   imagepath:string = ''
   clicked:boolean = false
-  show:boolean = true
+  show:boolean = false
+  @Output() emitRecipe:EventEmitter<Recipe> = new EventEmitter()
+  @Output() selected:EventEmitter<Boolean> =new EventEmitter()
   recipes: Recipe[] = [
     new Recipe('Salad','This will be tasty','https://images.unsplash.com/photo-1577594990850-e843a8e91512?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'),
     new Recipe('Pancake','With chocolate sauce and toppings','https://images.unsplash.com/photo-1504113888839-1c8eb50233d3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1015&q=80'),
@@ -37,8 +39,16 @@ export class RecipiesListComponent implements OnInit {
       Imagepath: Data.Imagepath
     })
   }
-  showDiv(){
-    this.show = !this.show
-  }
+  showDiv(data:Recipe){
+    this.name = data.Name
+    this.desc = data.Description
+    this.imagepath = data.Imagepath
 
+    this.emitRecipe.emit({
+      Name: this.name,
+      Description: this.desc,
+      Imagepath: this.imagepath
+    })
+    this.selected.emit(true)
+  }
 }

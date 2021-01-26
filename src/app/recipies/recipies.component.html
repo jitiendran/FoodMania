@@ -1,4 +1,10 @@
 <div class="recipes-wrapper">
     <h3>Recipes</h3>
-    <app-recipies-list></app-recipies-list>
+    <app-recipies-list 
+        (emitRecipe) = "inserttoItems($event)"
+        (selected) = "sendSelected($event)"></app-recipies-list>
+    <app-recipe-item 
+        [items]="recipetobeShowed"
+        [select]="Selected"
+    ></app-recipe-item>
 </div>
